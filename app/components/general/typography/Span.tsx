@@ -1,8 +1,9 @@
 import React from 'react';
-import {BaseTypography, BaseTypographyProps} from "@/app/components/typography/BaseTypography";
 import styled from "styled-components";
+import {BaseTypography, BaseTypographyProps} from "~/components/general/typography/BaseTypography";
 
-const StyledSpan = styled(BaseTypography)``
+const StyledSpan = styled(BaseTypography)`
+`
 
 type Props = BaseTypographyProps<'span'>;
 

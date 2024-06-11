@@ -1,6 +1,6 @@
-import {COLORS, ColorValues} from "@/app/design-tokens";
 import styled from "styled-components";
 import React from 'react'
+import {COLORS, ColorValues} from "~/design-tokens";
 
 export type BaseTypographyProps<T extends React.ElementType> = {
     as?: T;
@@ -12,13 +12,13 @@ export type BaseTypographyProps<T extends React.ElementType> = {
 } & React.ComponentPropsWithoutRef<T>
 
 const StyledBaseTypography = styled.div<BaseTypographyProps<any>>`
+    line-height: 1.25;
     ${({$centered, $color, $whiteSpace, $wordBreak}) => `
         ${$centered ? 'text-align: center;' : ''}
         color: ${$color};
         white-space: ${$whiteSpace};
         word-break: ${$wordBreak};
     `}
-}
 `
 
 export const BaseTypography = <T extends React.ElementType = 'p'>

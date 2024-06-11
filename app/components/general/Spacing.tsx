@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {SizeKeys, SIZES} from "@/app/design-tokens";
+import {SizeKeys, SIZES} from "~/design-tokens";
 
 type SpacerProps = {
     height?: SizeKeys,

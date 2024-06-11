@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
 import styled from "styled-components";
-import {Column} from "@/app/components/Flex";
+import {Column} from "~/components/general/Flex";
+import {useState} from "react";
 
 const RoundedBox = styled.div<{ selected: boolean }>`
     display: flex;

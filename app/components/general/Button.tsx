@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from "styled-components";
-import {COLORS, SIZES} from "@/app/design-tokens";
+import {COLORS, SIZES} from "~/design-tokens";
 
 type StyledButtonProps = {
     type?: "primary" | "secondary" | "tertiary";
@@ -10,9 +10,11 @@ type StyledButtonProps = {
 }
 
 const StyledButton = styled.button<StyledButtonProps>`
-    height: ${SIZES.MD.px};
+    min-height: ${SIZES.MD.px};
+    max-width: 75%; // TODO: add media query
+    padding: ${SIZES.XS.px} ${SIZES.SM.px};
     border: 1px solid ${COLORS.BLACK};
-    border-radius: ${SIZES.XXXS.px};
+    border-radius: ${SIZES.MD.px};
     cursor: pointer;
     ${({size, disabled, loading}) => `
         width: ${size === 'fullwidth' ? '100%' : 'initial'};

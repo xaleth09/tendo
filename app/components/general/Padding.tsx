@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import {SizeKeys, SPACING} from '../../design-tokens';
-import {Column, ColumnProps} from "@/app/components/Flex";
+import {SizeKeys, SPACING} from '~/design-tokens';
+import {Column, ColumnProps} from "~/components/general/Flex";
 
 type PaddingProps = {
     size: SizeKeys;

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {BaseTypography, BaseTypographyProps} from "@/app/components/typography/BaseTypography";
+import {BaseTypography, BaseTypographyProps} from "./BaseTypography";
 
 type H1Props = {} & BaseTypographyProps<'h1'>;
 export const H1 = styled(BaseTypography).attrs({forwardedAs: 'h1'})<H1Props>``
