@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {BaseTypography, BaseTypographyProps} from "~/components/general/typography/BaseTypography";
 
 const StyledSpan = styled(BaseTypography)`
+    line-height: 1.35;
 `
 
 type Props = BaseTypographyProps<'span'>;

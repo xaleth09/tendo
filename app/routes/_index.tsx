@@ -1,5 +1,5 @@
 import type { MetaFunction } from "@remix-run/node";
-import {FeedbackForm} from "~/routes/feedback_form/FeedbackForm";
+import {FeedbackForm} from "~/routes/feedback-form/FeedbackForm";
 
 export const meta: MetaFunction = () => {
   return [
