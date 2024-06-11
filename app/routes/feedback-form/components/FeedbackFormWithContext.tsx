@@ -5,8 +5,11 @@ import {ActionType} from "~/api/types";
 import {Prompts} from "~/routes/feedback-form/components/Prompts";
 import useFormContext from "~/routes/feedback-form/form-context/useFormContext";
 import {fakePOSTFormResponse} from "~/api/fakePOSTFormResponse";
+import {useState} from "react";
+import {ResultsPage} from "~/routes/feedback-form/components/ResultsPage";
 
 export const FeedbackFormWithContext = () => {
+    const [hasBeenSubmitted, setHasBeenSubmitted] = useState(false);
     const {formResponse, updateFormResponse} = useFormContext()
     const {
         data,
@@ -49,6 +52,7 @@ export const FeedbackFormWithContext = () => {
                 break;
             case 'submit':
                 fakePOSTFormResponse(formResponse);
+                setHasBeenSubmitted(true)
                 break;
             default:
                 break;
@@ -69,7 +73,7 @@ export const FeedbackFormWithContext = () => {
 
     console.table(formResponse)
 
-    return (
+    return hasBeenSubmitted ? (<ResultsPage/>) : (
         <FormPage
             header={header}
             headerCopy={header_copy}
